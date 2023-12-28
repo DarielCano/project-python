@@ -1,0 +1,24 @@
+{%extends 'commonContent.html' %} {% load static %} {% block contentViews%}
+
+<div class="container">
+  <a class="btn" href="{% url 'authorForm' %}">Agregar Autor</a>
+  <a class="btn" href="{% url 'journalForm' %}">Agregar Revista</a>
+  <a class="btn" href="{% url 'bookForm' %}">Agregar Libro</a>
+  <a class="btn" href="{% url 'publicationForm' %}">Agregar Publicación</a>
+</div>
+
+<h2>Búsqueda</h2>
+<h3>(nombre de autor, titulo de libro y revista o nombre de publicación</h3>
+
+<form action="{% url 'search' %}" class="search" method="get">
+  <select name="select">
+    <option value="journal">Revista</option>
+    <option value="book" selected>Libro</option>
+    <option value="publication">Publicación</option>
+    <option value="author">Autor</option>
+  </select>
+  <input type="text" name="search" id="search" placeholder="Buscar" />
+  <input type="submit" value="Buscar" />
+</form>
+
+{% endblock %}

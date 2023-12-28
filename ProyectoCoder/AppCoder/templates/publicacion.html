@@ -1,0 +1,28 @@
+{%extends 'commonContent.html' %} {% load static %} {% block contentViews%}
+<a class="btn" href="{% url 'publicationForm' %}">Agregar Publicación</a>
+
+<div class="content-container">
+  <div class="section">
+    <h2>Información de Publicaciones</h2>
+    <div class="cards">
+      {% if publications %} {% for publication in publications %}
+      <div class="card">
+        <strong>{{publication.name}} </strong>
+        <p>Autor: {{publication.author}}</p>
+        {% if publication.isActive%}
+        <p>Publicación vigente</p>
+        {% else %}
+        <p>Publicación vencida</p>
+        {% endif %}
+        <p></p>
+      </div>
+
+      {% endfor %} {% else %}
+      <p>No hay información por mostrar aun 😟</p>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock%}

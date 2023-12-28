@@ -1,0 +1,23 @@
+{%extends 'commonContent.html' %} {% load static %} {% block contentViews%}
+
+<a class="btn" href="{% url 'journalForm' %}">Agregar Revista</a>
+
+<div class="content-container">
+  <div class="section">
+    <h2>Información de Revistas</h2>
+    <div class="cards">
+      {% if journals %} {% for journal in journals %}
+      <div class="card">
+        <strong>{{journal.title}} </strong>
+        <p>Autor: {{journal.author}}</p>
+      </div>
+
+      {% endfor %} {% else %}
+      <p>No hay información por mostrar aun 😟</p>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock%}

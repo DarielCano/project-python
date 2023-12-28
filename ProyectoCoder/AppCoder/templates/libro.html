@@ -1,0 +1,22 @@
+{%extends 'commonContent.html' %} {% load static %} {% block contentViews%}
+<a class="btn" href="{% url 'bookForm' %}">Agregar Libro</a>
+
+<div class="content-container">
+  <div class="section">
+    <h2>Información de Libros</h2>
+    <div class="cards">
+      {% if books %} {% for book in books %}
+      <div class="card">
+        <strong>{{book.title}} </strong>
+        <p>Autor: {{book.author}}</p>
+      </div>
+
+      {% endfor %} {% else %}
+      <p>No hay información por mostrar aun 😟</p>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock%}

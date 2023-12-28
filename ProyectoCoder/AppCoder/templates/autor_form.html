@@ -1,0 +1,32 @@
+{% extends 'commonContent.html' %} {% load static %} {% block contentViews %}
+<section>
+  <h2>Autores</h2>
+
+  <form action="{% url 'authorForm' %}" method="POST">
+    {% csrf_token %}
+    <div>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" placeholder="Ingrese el nombre" />
+    </div>
+
+    <div>
+      <label for="surname">Apellidos</label>
+      <input type="text" name="surname" placeholder="Ingrese el apellido" />
+    </div>
+
+    <div>
+      <label for="age">Edad</label>
+      <input type="number" name="age" placeholder="Ingrese la edad" />
+    </div>
+    <div>
+      <label for="publications">Publicaciones</label>
+      <textarea name="publications" id="" cols="30" rows="10">
+
+Ingrese las publicaciones</textarea
+      >
+    </div>
+    <input type="submit" value="Agregar" />
+  </form>
+</section>
+
+{% endblock %}

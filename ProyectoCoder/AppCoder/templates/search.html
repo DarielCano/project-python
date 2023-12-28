@@ -1,0 +1,22 @@
+{%extends 'commonContent.html' %} {% load static %} {% block contentViews%}
+
+<div class="cards">
+  <h2>Resultados de la búsqueda</h2>
+
+  {% if result%} {% for info in result%} {% if select == "author" %}
+  <div class="card">{{info.name}}</div>
+  {% elif select == "publication" %}
+  <div class="card">{{info.name}}</div>
+  {% elif select == "journal" %}
+  <div class="card">{{info.title}}</div>
+  {% else%}
+  <div class="card">{{info.title}}</div>
+  {% endif %} {% endfor %} {%else%}
+  <p>No hay coincidencias 😟</p>
+
+  {% endif%}
+</div>
+
+<a class="btn" href="{% url 'inicio'%}">Regresar</a>
+
+{% endblock %}
