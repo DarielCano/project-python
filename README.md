@@ -6,7 +6,7 @@ Cuenta con herencia HTML y búsqueda según modelo
 # INSTALACION
 
 - Clonar repositorio de GitHub.
-- Clonar entorno virtual entorno-virtual
+- Activar entorno virtual entorno-virtual
 - Entrar al directorio de ProyectoCoder
 - Ejecutar python manage.py runserver
 
