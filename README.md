@@ -9,12 +9,15 @@ Cuenta con herencia HTML y búsqueda según modelo
 - Activar entorno virtual entorno-virtual
 - Entrar al directorio de ProyectoCoder
 - Ejecutar python manage.py runserver
+- Para acceder al panel de administracion usar las siguientes credenciales
+- usuario: tester
+- contrasenna: test1234$
 
 # MODELOS CREADOS
 
 | Modelo                  | Descripción             |
 | :---------------------- | ----------------------- | ----------------------------------------------------------------------------------- |
-| `Book` Modelo de libros |
+| `Book`                  |  Modelo de libros       |
 | :------------------     | :----------------       | :---------------------------------------------------------------------------------- |
 | `Journal`               | Modelo de Revistas      |
 | :------------------     | :----------------       | :---------------------------------------------------------------------------------- |
